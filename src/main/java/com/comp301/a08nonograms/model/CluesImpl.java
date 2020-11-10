@@ -36,11 +36,11 @@ public final class CluesImpl implements Clues {
 
   @Override
   public int getRowCluesLength() {
-    return rowClues.length;
+    return rowClues[0].length;
   }
 
   @Override
   public int getColCluesLength() {
-    return colClues.length;
+    return colClues[0].length;
   }
 }
