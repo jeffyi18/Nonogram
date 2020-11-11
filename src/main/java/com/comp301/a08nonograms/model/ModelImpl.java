@@ -18,6 +18,10 @@ public class ModelImpl implements Model {
     setPuzzleIndex(0);
   }
 
+  public Clues getClues() {
+    return currentClues;
+  }
+
   @Override
   public int getPuzzleCount() {
     return clues.size();
