@@ -116,7 +116,6 @@ public class ModelImpl implements Model {
   public void toggleCellEliminated(int row, int col) {
     puzzleBoard.toggleCellEliminated(row, col);
     notifyObservers();
-
   }
 
   @Override
