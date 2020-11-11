@@ -19,7 +19,7 @@ public final class BoardImpl implements Board {
 
   @Override
   public boolean isShaded(int row, int col) {
-    if (row >= width || col >= height) {
+    if (row > width || col > height) {
       throw new RuntimeException();
     }
     return boardState[row][col].equals("shaded");
