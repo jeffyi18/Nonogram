@@ -31,7 +31,7 @@ public class ModelImpl implements Model {
   @Override
   public void setPuzzleIndex(int index) {
     puzzleIndex = index;
-    currentClues = clues.get(index);
+    currentClues = clues.get(puzzleIndex);
     puzzleBoard = new BoardImpl(currentClues.getWidth(), currentClues.getHeight());
     notifyObservers();
   }

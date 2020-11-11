@@ -5,6 +5,7 @@ public final class BoardImpl implements Board {
   private String[][] boardState;
 
   public BoardImpl (int width, int height) {
+    boardState = new String[width][height];
     for (int i = 0; i < width; i++) {
       for (int j = 0; j < height; j++) {
         boardState[i][j] = "blank";
