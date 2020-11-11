@@ -5,12 +5,12 @@ import java.util.List;
 
 public class ModelImpl implements Model {
   private List<ModelObserver> observers;
-  private ArrayList<Clues> clues;
+  private List<Clues> clues;
   private Clues currentClues;
   private int puzzleIndex;
   private Board puzzleBoard;
 
-  public ModelImpl(ArrayList<Clues> clues) {
+  public ModelImpl(List<Clues> clues) {
     observers = new ArrayList<>();
     this.clues = clues;
     puzzleIndex = 0;
