@@ -1,6 +1,6 @@
 package com.comp301.a08nonograms.model;
 
-public final class BoardImpl implements Board {
+public class BoardImpl implements Board {
 
   private String[][] boardState;
   private int width;
@@ -19,7 +19,7 @@ public final class BoardImpl implements Board {
 
   @Override
   public boolean isShaded(int row, int col) {
-    if (row > width || col > height) {
+    if (row >= width || col >= height) {
       throw new RuntimeException();
     }
     return boardState[row][col].equals("shaded");
