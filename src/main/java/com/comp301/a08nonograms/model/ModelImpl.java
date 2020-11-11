@@ -79,7 +79,7 @@ public class ModelImpl implements Model {
       }
       int totalShaded = 0;
       for (int j = 0; j < getWidth(); j++) {
-        if (isShaded(j, i)) {
+        if (isShaded(i, j)) {
           totalShaded++;
         }
       }
