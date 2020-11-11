@@ -14,7 +14,7 @@ public class ModelImpl implements Model {
     observers = new ArrayList<>();
     this.clues = clues;
     puzzleIndex = 0;
-    puzzleBoard = new BoardImpl(0,0);
+    puzzleBoard = new BoardImpl(0, 0);
     setPuzzleIndex(0);
   }
 
@@ -37,7 +37,7 @@ public class ModelImpl implements Model {
   }
 
   public void notifyObservers() {
-    for (ModelObserver i: observers) {
+    for (ModelObserver i : observers) {
       i.update(this);
     }
   }
@@ -93,28 +93,28 @@ public class ModelImpl implements Model {
 
   @Override
   public boolean isShaded(int row, int col) {
-    return puzzleBoard.isShaded(row,col);
+    return puzzleBoard.isShaded(row, col);
   }
 
   @Override
   public boolean isEliminated(int row, int col) {
-    return puzzleBoard.isEliminated(row,col);
+    return puzzleBoard.isEliminated(row, col);
   }
 
   @Override
   public boolean isSpace(int row, int col) {
-    return puzzleBoard.isSpace(row,col);
+    return puzzleBoard.isSpace(row, col);
   }
 
   @Override
   public void toggleCellShaded(int row, int col) {
-    puzzleBoard.toggleCellShaded(row,col);
+    puzzleBoard.toggleCellShaded(row, col);
     notifyObservers();
   }
 
   @Override
   public void toggleCellEliminated(int row, int col) {
-    puzzleBoard.toggleCellEliminated(row,col);
+    puzzleBoard.toggleCellEliminated(row, col);
     notifyObservers();
 
   }
@@ -137,7 +137,7 @@ public class ModelImpl implements Model {
 
   @Override
   public int[] getRowClues(int index) {
-  return currentClues.getRowClues(index);
+    return currentClues.getRowClues(index);
   }
 
   @Override
@@ -146,7 +146,8 @@ public class ModelImpl implements Model {
   }
 
   @Override
-  public int getRowCluesLength() { return currentClues.getRowCluesLength();
+  public int getRowCluesLength() {
+    return currentClues.getRowCluesLength();
   }
 
   @Override

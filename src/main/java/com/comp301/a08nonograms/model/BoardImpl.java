@@ -6,7 +6,7 @@ public class BoardImpl implements Board {
   private int width;
   private int height;
 
-  public BoardImpl (int width, int height) {
+  public BoardImpl(int width, int height) {
     this.width = width;
     this.height = height;
     boardState = new String[height][width];

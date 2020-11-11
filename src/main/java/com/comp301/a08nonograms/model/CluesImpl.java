@@ -15,7 +15,8 @@ public final class CluesImpl implements Clues {
   }
 
   @Override
-  public int getWidth() { return width;
+  public int getWidth() {
+    return width;
   }
 
   @Override
