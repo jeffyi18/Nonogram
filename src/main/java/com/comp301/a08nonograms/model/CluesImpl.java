@@ -10,13 +10,12 @@ public final class CluesImpl implements Clues {
   public CluesImpl(int[][] rowClues, int[][] colClues) {
     this.rowClues = rowClues;
     this.colClues = colClues;
-    this.height = rowClues.length;
-    this.width = colClues.length;
+    this.width = rowClues.length;
+    this.height = colClues.length;
   }
 
   @Override
-  public int getWidth() {
-    return width;
+  public int getWidth() { return width;
   }
 
   @Override
