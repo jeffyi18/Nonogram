@@ -19,7 +19,7 @@ public class BoardImpl implements Board {
 
   @Override
   public boolean isShaded(int row, int col) {
-    if (row >= width || col >= height) {
+    if (row >= height || col >= width) {
       throw new RuntimeException();
     }
     return boardState[row][col].equals("shaded");
@@ -27,7 +27,7 @@ public class BoardImpl implements Board {
 
   @Override
   public boolean isEliminated(int row, int col) {
-    if (row >= width || col >= height) {
+    if (row >= height || col >= width) {
       throw new RuntimeException();
     }
     return boardState[row][col].equals("eliminated");
@@ -35,7 +35,7 @@ public class BoardImpl implements Board {
 
   @Override
   public boolean isSpace(int row, int col) {
-    if (row >= width || col >= height) {
+    if (row >= height || col >= width) {
       throw new RuntimeException();
     }
     return boardState[row][col].equals("blank");
@@ -43,7 +43,7 @@ public class BoardImpl implements Board {
 
   @Override
   public void toggleCellShaded(int row, int col) {
-    if (row >= width || col >= height) {
+    if (row >= height || col >= width) {
       throw new RuntimeException();
     }
     if (boardState[row][col].equals("shaded")) {
@@ -55,7 +55,7 @@ public class BoardImpl implements Board {
 
   @Override
   public void toggleCellEliminated(int row, int col) {
-    if (row >= width || col >= height) {
+    if (row >= height || col >= width) {
       throw new RuntimeException();
     }
     if (boardState[row][col].equals("eliminated")) {
