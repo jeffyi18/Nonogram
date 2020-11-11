@@ -9,7 +9,7 @@ public class BoardImpl implements Board {
   public BoardImpl (int width, int height) {
     this.width = width;
     this.height = height;
-    boardState = new String[width][height];
+    boardState = new String[height][width];
     for (int i = 0; i < height; i++) {
       for (int j = 0; j < width; j++) {
         boardState[i][j] = "blank";
