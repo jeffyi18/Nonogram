@@ -75,16 +75,20 @@ public class ModelImpl implements Model {
   @Override
   public void toggleCellShaded(int row, int col) {
     puzzleBoard.toggleCellShaded(row,col);
+    notifyObservers();
   }
 
   @Override
   public void toggleCellEliminated(int row, int col) {
     puzzleBoard.toggleCellEliminated(row,col);
+    notifyObservers();
+
   }
 
   @Override
   public void clear() {
     puzzleBoard.clear();
+    notifyObservers();
   }
 
   @Override
