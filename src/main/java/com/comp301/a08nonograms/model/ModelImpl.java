@@ -54,7 +54,41 @@ public class ModelImpl implements Model {
 
   @Override
   public boolean isSolved() {
-    return false;
+    for (int i = 0; i < getWidth(); i++) {
+      int[] colClue = getColClues(i);
+      int expectedTotalShaded = 0;
+      for (int j = 0; j < colClue.length; j++) {
+        expectedTotalShaded += colClue[j];
+      }
+      int totalShaded = 0;
+      for (int j = 0; j < getHeight(); j++) {
+        if (isShaded(j, i)) {
+          totalShaded++;
+        }
+      }
+      if (expectedTotalShaded != totalShaded) {
+        return false;
+      }
+    }
+
+    for (int i = 0; i < getHeight(); i++) {
+      int[] rowClue = getRowClues(i);
+      int expectedTotalShaded = 0;
+      for (int j = 0; j < rowClue.length; j++) {
+        expectedTotalShaded += rowClue[j];
+      }
+      int totalShaded = 0;
+      for (int j = 0; j < getWidth(); j++) {
+        if (isShaded(j, i)) {
+          totalShaded++;
+        }
+      }
+      if (expectedTotalShaded != totalShaded) {
+        return false;
+      }
+    }
+
+    return true;
   }
 
   @Override
