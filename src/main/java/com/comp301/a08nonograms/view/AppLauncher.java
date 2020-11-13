@@ -30,7 +30,7 @@ public class AppLauncher extends Application {
     // Refresh view when model changes
     model.addObserver(
         (Model m) -> {
-      stage.setScene(new Scene(view.render()));
+          stage.setScene(new Scene(view.render()));
         });
 
     // Show the stage
