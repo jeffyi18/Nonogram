@@ -15,7 +15,7 @@ public class View implements FXComponent {
   public Parent render() {
     VBox layout = new VBox();
 
-    //Clues View
+    // Clues View
     CluesView cluesView = new CluesView(controller);
     layout.getChildren().add(cluesView.render());
 

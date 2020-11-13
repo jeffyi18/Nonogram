@@ -42,7 +42,8 @@ public class PuzzleView implements FXComponent {
         int finalI = i;
         int finalJ = j;
 
-        cell.setOnMousePressed((MouseEvent event) -> {
+        cell.setOnMousePressed(
+            (MouseEvent event) -> {
           if (event.getButton() == MouseButton.PRIMARY) {
             controller.toggleShaded(finalI, finalJ);
           } else if (event.getButton() == MouseButton.SECONDARY) {
@@ -54,7 +55,7 @@ public class PuzzleView implements FXComponent {
       }
       String clueText = "";
       for (int j = 0; j < clues.getRowCluesLength(); j++) {
-        clueText += clues.getRowClues(i)[j] +" ";
+        clueText += clues.getRowClues(i)[j] + " ";
       }
       Text clue = new Text(clueText);
       layout.add(clue, clues.getWidth() + 1, i);
