@@ -22,24 +22,28 @@ public class ControlView implements FXComponent {
     hbox.setSpacing(10);
 
     Button randomButton = new Button("Random");
-    randomButton.setOnAction((ActionEvent event) -> {
+    randomButton.setOnAction(
+        (ActionEvent event) -> {
       controller.randPuzzle();
     });
 
     Button resetButton = new Button("Reset");
-    resetButton.setOnAction((ActionEvent event) -> {
+    resetButton.setOnAction(
+        (ActionEvent event) -> {
       controller.clearBoard();
     });
 
     Button previousButton = new Button("\u00AB");
-    previousButton.setOnAction((ActionEvent event) -> {
+    previousButton.setOnAction(
+        (ActionEvent event) -> {
       controller.prevPuzzle();
     });
 
     Text puzzleNumber = new Text("Puzzle " + (controller.getPuzzleIndex() + 1) + "/5");
 
     Button nextButton = new Button("\u00BB");
-    nextButton.setOnAction((ActionEvent event) -> {
+    nextButton.setOnAction(
+        (ActionEvent event) -> {
       controller.nextPuzzle();
     });
 
