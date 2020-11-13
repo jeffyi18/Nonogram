@@ -25,19 +25,19 @@ public class ControlView implements FXComponent {
     randomButton.setOnAction(
         (ActionEvent event) -> {
           controller.randPuzzle();
-    });
+      });
 
     Button resetButton = new Button("Reset");
     resetButton.setOnAction(
         (ActionEvent event) -> {
           controller.clearBoard();
-    });
+      });
 
     Button previousButton = new Button("\u00AB");
     previousButton.setOnAction(
         (ActionEvent event) -> {
           controller.prevPuzzle();
-    });
+      });
 
     Text puzzleNumber = new Text("Puzzle " + (controller.getPuzzleIndex() + 1) + "/5");
 
@@ -45,7 +45,7 @@ public class ControlView implements FXComponent {
     nextButton.setOnAction(
         (ActionEvent event) -> {
           controller.nextPuzzle();
-    });
+      });
 
     hbox.getChildren().addAll(randomButton, resetButton, previousButton, puzzleNumber, nextButton);
     return hbox;

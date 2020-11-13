@@ -31,7 +31,7 @@ public class AppLauncher extends Application {
     model.addObserver(
         (Model m) -> {
       stage.setScene(new Scene(view.render()));
-    });
+        });
 
     // Show the stage
     stage.setTitle("Nonogram Game");
