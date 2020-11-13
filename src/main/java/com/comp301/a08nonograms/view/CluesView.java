@@ -20,9 +20,11 @@ public class CluesView implements FXComponent {
     Clues clues = controller.getClues();
 
     HBox hbox = new HBox();
-    hbox.setPadding(new Insets(15, 12, 15, 12));
+    hbox.setPadding(new Insets(15, 12, 5, 12));
+    Text buffer = new Text("");
+    hbox.getChildren().add(buffer);
 
-    hbox.setSpacing(34);
+    hbox.setSpacing(32);
     for (int i = 0; i < clues.getWidth(); i++) {
       String clueText = "";
       for (int j = 0; j < clues.getColCluesLength(); j++) {

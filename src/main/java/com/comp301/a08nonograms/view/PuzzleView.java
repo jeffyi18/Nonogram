@@ -5,6 +5,7 @@ import com.comp301.a08nonograms.model.Clues;
 import javafx.scene.Parent;
 import javafx.scene.input.MouseButton;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.Border;
 import javafx.scene.layout.GridPane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
@@ -26,9 +27,19 @@ public class PuzzleView implements FXComponent {
     GridPane layout = new GridPane();
 
     for (int i = 0; i < clues.getHeight(); i++) {
+
+      // Adding Column Clues to Side
+
+      String clueText = "  ";
+      for (int j = 0; j < clues.getRowCluesLength(); j++) {
+        clueText += clues.getRowClues(i)[j] + " ";
+      }
+      Text clue = new Text(clueText);
+      layout.add(clue, 0, i);
+
       for (int j = 0; j < clues.getWidth(); j++) {
 
-        Rectangle cell = new Rectangle(30, 30, new Color(1, 1, 1, 1));
+        Rectangle cell = new Rectangle(30, 30, new Color(0, 0, 0, 1));
 
         // Add if statement to check shade/eliminated
         if (controller.isEliminated(i, j)) {
@@ -51,14 +62,8 @@ public class PuzzleView implements FXComponent {
               }
             });
 
-        layout.add(cell, j, i);
+        layout.add(cell, j + 1, i);
       }
-      String clueText = "";
-      for (int j = 0; j < clues.getRowCluesLength(); j++) {
-        clueText += clues.getRowClues(i)[j] + " ";
-      }
-      Text clue = new Text(clueText);
-      layout.add(clue, clues.getWidth() + 1, i);
     }
     return layout;
   }
