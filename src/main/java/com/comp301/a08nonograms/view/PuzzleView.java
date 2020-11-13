@@ -49,7 +49,7 @@ public class PuzzleView implements FXComponent {
           } else if (event.getButton() == MouseButton.SECONDARY) {
             controller.toggleEliminated(finalI, finalJ);
           }
-        });
+            });
 
         layout.add(cell, j, i);
       }
