@@ -44,11 +44,11 @@ public class PuzzleView implements FXComponent {
 
         cell.setOnMousePressed(
             (MouseEvent event) -> {
-          if (event.getButton() == MouseButton.PRIMARY) {
-            controller.toggleShaded(finalI, finalJ);
-          } else if (event.getButton() == MouseButton.SECONDARY) {
-            controller.toggleEliminated(finalI, finalJ);
-          }
+              if (event.getButton() == MouseButton.PRIMARY) {
+                controller.toggleShaded(finalI, finalJ);
+              } else if (event.getButton() == MouseButton.SECONDARY) {
+                controller.toggleEliminated(finalI, finalJ);
+              }
             });
 
         layout.add(cell, j, i);
