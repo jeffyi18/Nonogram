@@ -5,7 +5,6 @@ import com.comp301.a08nonograms.model.Clues;
 import javafx.scene.Parent;
 import javafx.scene.input.MouseButton;
 import javafx.scene.input.MouseEvent;
-import javafx.scene.layout.Border;
 import javafx.scene.layout.GridPane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
@@ -25,6 +24,9 @@ public class PuzzleView implements FXComponent {
 
     // Setting up GridPane for rectangle grid
     GridPane layout = new GridPane();
+
+    layout.setVgap(5);
+    layout.setHgap(5);
 
     for (int i = 0; i < clues.getHeight(); i++) {
 

@@ -24,7 +24,7 @@ public class CluesView implements FXComponent {
     Text buffer = new Text("");
     hbox.getChildren().add(buffer);
 
-    hbox.setSpacing(32);
+    hbox.setSpacing(38);
     for (int i = 0; i < clues.getWidth(); i++) {
       String clueText = "";
       for (int j = 0; j < clues.getColCluesLength(); j++) {

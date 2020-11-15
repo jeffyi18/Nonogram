@@ -21,7 +21,7 @@ public class AppLauncher extends Application {
     // Controller
     Controller controller = new ControllerImpl(model);
 
-    // Views
+    // View
     View view = new View(controller);
 
     // Make scene
